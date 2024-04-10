@@ -1,9 +1,6 @@
-import {RegisterPage} from './pages/RegisterPage.js'
-import {Browser, Builder} from "selenium-webdriver";
-
+const {RegisterPage} = require('./pages/RegisterPage.js')
+const {Browser, Builder} = require('selenium-webdriver')
+const {URL} = require("./consts.js")
 const driver = new Builder().forBrowser(Browser.CHROME).build();
-const regPage = new RegisterPage(driver);
-
-regPage.open();
-regPage.findAndClick("className","ico-register")
-regPage.sendDataToElement("id","FirstName","TestData")
+const regPage = new RegisterPage(driver,URL);
+regPage.open()
