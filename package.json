@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jest": "^29.7.0",
+    "node": "^18.20.1",
+    "selenium-webdriver": "^4.19.0"
+  }
+}
