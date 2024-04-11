@@ -11,7 +11,16 @@ class BasePage {
     }
 
     async justFind(method, name) {
-        return (await this.driver.wait(until.elementLocated(By[method](name)), 10000)) ? true : false;
+        //return (await this.driver.wait(until.elementLocated(By[method](name)), 10000)) ? true : false;
+        try {
+            await this.driver.findElement(By[method](name))
+            return true
+        } catch (error) {
+            if (error.name === 'NoSuchElementError') {
+                return false; // Элемент не найден
+            }
+            throw error; // Если ошибка не связана с отсутствием элемента, пробросим её дальше
+        }
     }
 
     async findAndClick(method, name) {
@@ -77,7 +86,7 @@ class BasePage {
             return false
         }
 
-        try{
+        try {
             let productTitleElement = await this.driver.wait(until.elementLocated(By[method_second](name_second)), 10000);
             foundItem = await productTitleElement.getText();
         } catch (error) {

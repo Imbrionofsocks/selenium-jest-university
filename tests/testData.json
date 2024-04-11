@@ -66,6 +66,30 @@
       "name":"ico-logout"
     }
   },
+  "authiPage": {
+  "goToAuthPage": {
+    "method": "className",
+    "name":"ico-login"
+  },
+  "setEmail": {
+    "method": "id",
+    "name":"Email",
+    "data":"pingpong8@yandex.ru"
+  },
+  "setPassword": {
+    "method": "id",
+    "name":"Password",
+    "data":"TestDataPass"
+  },
+  "pushConfButton": {
+    "method": "className",
+    "name":"button-1 login-button"
+  },
+  "isAuthorized": {
+    "method": "className",
+    "name":"ico-logout"
+  }
+},
   "naviPage": {
     "goToBooks": {
       "method": "linkText",
