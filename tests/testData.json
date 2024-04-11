@@ -1,0 +1,137 @@
+{
+  "regiPage": {
+    "goToRegPage": {
+    "method": "className",
+    "name":"ico-register"
+  },
+    "setRadio": {
+      "method": "id",
+      "name":"gender-male"
+    },
+    "setFName": {
+      "method": "id",
+      "name":"FirstName",
+      "data":"TestDataF"
+    },
+    "setLName": {
+      "method": "id",
+      "name":"LastName",
+      "data":"TestDataL"
+    },
+    "setEmail": {
+      "method": "id",
+      "name":"Email",
+      "data":"pingpong8@yandex.ru"
+    },
+    "setPassword": {
+      "method": "id",
+      "name":"Password",
+      "data":"TestDataPass"
+    },
+    "setPasswordConfirm": {
+      "method": "id",
+      "name":"ConfirmPassword",
+      "data":"TestDataPass"
+    },
+    "pushConfButton": {
+      "method": "id",
+      "name":"register-button"
+    },
+    "isRegistered": {
+      "method": "className",
+      "name":"result"
+    }
+  },
+  "authiPage": {
+    "goToAuthPage": {
+      "method": "className",
+      "name":"ico-login"
+    },
+    "setEmail": {
+      "method": "id",
+      "name":"Email",
+      "data":"pingpong8@yandex.ru"
+    },
+    "setPassword": {
+      "method": "id",
+      "name":"Password",
+      "data":"TestDataPass"
+    },
+    "pushConfButton": {
+      "method": "className",
+      "name":"button-1 login-button"
+    },
+    "isAuthorized": {
+      "method": "className",
+      "name":"ico-logout"
+    }
+  },
+  "naviPage": {
+    "goToBooks": {
+      "method": "linkText",
+      "name":"Books"
+    },
+    "goToComputers": {
+      "method": "linkText",
+      "name":"Computers"
+    },
+    "goToElectronics": {
+      "method": "linkText",
+      "name":"Electronics"
+    },
+    "goToShoes": {
+      "method": "linkText",
+      "name":"Apparel & Shoes"
+    },
+    "goToDownloads": {
+      "method": "linkText",
+      "name":"Digital downloads"
+    },
+    "goToJewelry": {
+      "method": "linkText",
+      "name":"Jewelry"
+    },
+    "goToGifts": {
+      "method": "linkText",
+      "name":"Gift Cards"
+    },
+    "isEntered": {
+      "method": "className",
+      "name": "page-title"
+    }
+  },
+  "searchiPage": {
+    "setRequest": {
+      "method": "id",
+      "name": "small-searchterms",
+      "data": "simple computer"
+    },
+    "pushSearchButton": {
+      "method": "className",
+      "name": "button-1 search-box-button"
+    },
+    "checkSearch": {
+      "method_first": "id",
+      "name_first": "Q",
+      "method_second": "xpath",
+      "name_second": "//h2[@class='product-title']/a"
+    }
+  },
+  "filteriPage": {
+    "goToPage": {
+      "method": "linkText",
+      "name":"Books"
+    },
+    "setFilter": {
+      "method": "xpath",
+      "name": "//a[@href='https://demowebshop.tricentis.com/books?price=50-']"
+
+    },
+    "compareFilterOverToItems": {
+      "method_first": "className",
+      "name_first": "PriceRange",
+      "method_second": "className",
+      "name_second": "price actual-price"
+    }
+  }
+}

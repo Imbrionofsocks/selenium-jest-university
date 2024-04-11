@@ -5,35 +5,35 @@ class RegisterPage extends BasePage{
         super(driver,url);
     }
 
-    openSite(testData){
+    openSite(){
         return this.open()
     }
     goToRegPage(testData){
-        return this.findAndClick("className","ico-register")
+        return this.findAndClick(testData.regiPage.goToRegPage.method,testData.regiPage.goToRegPage.name)
     }
     setRadio(testData){
-        return this.findAndClick("id","gender-male")
+        return this.findAndClick(testData.regiPage.setRadio.method,testData.regiPage.setRadio.name)
     }
     setFName(testData){
-        return this.sendDataToElement("id","FirstName","TestDataF")
+        return this.sendDataToElement(testData.regiPage.setFName.method,testData.regiPage.setFName.name,testData.regiPage.setFName.data)
     }
     setLName(testData){
-        return this.sendDataToElement("id","LastName","TestDataL")
+        return this.sendDataToElement(testData.regiPage.setLName.method,testData.regiPage.setLName.name,testData.regiPage.setLName.data)
     }
     setEmail(testData){
-        return this.sendDataToElement("id","Email","pingpong8@yandex.ru")
+        return this.sendDataToElement(testData.regiPage.setEmail.method,testData.regiPage.setEmail.name,testData.regiPage.setEmail.data)
     }
     setPassword(testData){
-        return this.sendDataToElement("id","Password","TestDataPass")
+        return this.sendDataToElement(testData.regiPage.setPassword.method,testData.regiPage.setPassword.name,testData.regiPage.setPassword.data)
     }
     setPasswordConfirm(testData){
-        return this.sendDataToElement("id","ConfirmPassword","TestDataPass")
+        return this.sendDataToElement(testData.regiPage.setPasswordConfirm.method,testData.regiPage.setPasswordConfirm.name,testData.regiPage.setPasswordConfirm.data)
     }
     pushConfButton(testData){
-        return this.findAndClick("id","register-button")
+        return this.findAndClick(testData.regiPage.pushConfButton.method,testData.regiPage.pushConfButton.name,testData.regiPage.pushConfButton.data)
     }
     isRegistered(testData){
-        return this.justFind("className","account")
+        return this.justFind(testData.regiPage.isRegistered.method,testData.regiPage.isRegistered.name)
     }
 }
 

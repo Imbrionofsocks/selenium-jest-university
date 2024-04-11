@@ -1,7 +1,13 @@
 const {RegisterPage} = require('../pages/RegisterPage.js')
 const {Browser, Builder} = require('selenium-webdriver')
 const {URL} = require("../consts.js")
-describe('Register Page tests', () => {
+const fs = require('fs');
+
+let rawdata = fs.readFileSync('tests/testData.json');
+let testData = JSON.parse(rawdata);
+testData.regiPage.setEmail.data = `pingpong${Date.now()}@yandex.ru`
+
+describe('Тесты страницы авторизации', () => {
     let driver = new Builder().forBrowser(Browser.CHROME).build();
     let regPage;
     beforeAll(async () => {
@@ -13,63 +19,63 @@ describe('Register Page tests', () => {
     test('Переход на страницу регистрации', async () => {
         const expected = true
         regPage.openSite()
-        const result = await regPage.goToRegPage()
+        const result = await regPage.goToRegPage(testData)
 
         expect(result).toBe(expected)
     });
     test('Ввод radioButton', async () => {
         const expected = true
 
-        const result = await regPage.setRadio()
+        const result = await regPage.setRadio(testData)
 
         expect(result).toBe(expected)
     });
     test('Ввод имени', async () => {
         const expected = true
 
-        const result = await regPage.setFName()
+        const result = await regPage.setFName(testData)
 
         expect(result).toBe(expected)
     });
     test('Ввод фамилии', async () => {
         const expected = true
 
-        const result = await regPage.setLName()
+        const result = await regPage.setLName(testData)
 
         expect(result).toBe(expected)
     });
     test('Ввод e-mail', async () => {
         const expected = true
 
-        const result = await regPage.setEmail()
+        const result = await regPage.setEmail(testData)
 
         expect(result).toBe(expected)
     });
     test('Ввод пароля', async () => {
         const expected = true
 
-        const result = await regPage.setPassword()
+        const result = await regPage.setPassword(testData)
 
         expect(result).toBe(expected)
     });
     test('Подтверждение пароля', async () => {
         const expected = true
 
-        const result = await regPage.setPasswordConfirm()
+        const result = await regPage.setPasswordConfirm(testData)
 
         expect(result).toBe(expected)
     });
     test('Отправка данных', async () => {
         const expected = true
 
-        const result = await regPage.pushConfButton()
+        const result = await regPage.pushConfButton(testData)
 
         expect(result).toBe(expected)
     });
     test('Проверка регистрации', async () => {
             const expected = true
 
-            const result = await regPage.isRegistered()
+            const result = await regPage.isRegistered(testData)
 
             expect(result).toBe(expected)
     });

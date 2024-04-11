@@ -1,2 +1,2 @@
-const URL="https://demowebsp.tricentis.com/"
+const URL="https://demowebshop.tricentis.com/"
 module.exports={URL}
