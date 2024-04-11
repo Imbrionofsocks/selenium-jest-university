@@ -14,7 +14,6 @@ class NavigationPage extends BasePage{
     goToComputers(testData){
         return this.findAndClick(testData.naviPage.goToComputers.method,testData.naviPage.goToComputers.name)
     }
-
     goToElectronics(testData){
         return this.findAndClick(testData.naviPage.goToElectronics.method,testData.naviPage.goToElectronics.name)
     }

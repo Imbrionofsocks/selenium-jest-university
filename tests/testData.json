@@ -133,5 +133,36 @@
       "method_second": "className",
       "name_second": "price actual-price"
     }
+  },
+  "cartiPage": {
+    "goToCategoryPage": {
+      "method": "linkText",
+      "name":"Books"
+    },
+    "goToProductPage": {
+      "method": "xpath",
+      "name": "//h2[@class='product-title']/a"
+    },
+    "addToCart": {
+      "method": "id",
+      "name": "add-to-cart-button-13"
+    },
+    "goToCartPage": {
+      "method": "className",
+      "name": "ico-cart"
+    },
+    "pushRemove": {
+      "method": "xpath",
+      "name": "//input[@value='4158323']"
+    },
+    "setProductAmount": {
+      "method": "name",
+      "name": "itemquantity4158323",
+      "data": "10"
+    },
+    "pushUpdateCart": {
+      "method": "name",
+      "name": "updatecart"
+    }
   }
 }
